@@ -1,0 +1,47 @@
+{
+  "name": "cpo-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint .",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "google"
+    ],
+    "rules": {
+      "arrow-parens": ["error", "as-needed"]
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": false,
+      "codeFrame": false
+    }
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.8.0",
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.0",
+    "sinon": "^2.3.2",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "koa": "^2.2.0"
+  }
+}
