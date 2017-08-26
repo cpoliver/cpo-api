@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "dev": "node_modules/.bin/babel-watch ./app/index.js",
     "lint": "node_modules/.bin/eslint .",
     "precommit": "lint-staged"
   },
@@ -22,7 +23,10 @@
       "google"
     ],
     "rules": {
-      "arrow-parens": ["error", "as-needed"]
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ]
     },
     "parser": "babel-eslint",
     "parserOptions": {
@@ -34,6 +38,7 @@
   "devDependencies": {
     "ava": "^0.19.1",
     "babel-eslint": "^7.2.3",
+    "babel-watch": "^2.0.7",
     "eslint": "^3.19.0",
     "eslint-config-google": "^0.8.0",
     "husky": "^0.13.4",
